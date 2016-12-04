@@ -97,18 +97,11 @@ AFRAME.registerComponent('touch-controls', {
     buttonMeshes.menu1    = controllerObject3D.getObjectByName(leftHand ? 'tooche1 group3 control_surface group2 button2' : 'tooche group4 control_surface group2 button2');
     buttonMeshes.menu2    = controllerObject3D.getObjectByName(leftHand ? 'tooche1 group3 control_surface group2 button3' : 'tooche group4 control_surface group2 button3');
     buttonMeshes.surface  = controllerObject3D.getObjectByName(leftHand ? 'tooche1 group3 face control_surface group2' : 'tooche group4 face control_surface group2');
-
-    // Offset pivot point
-    controllerObject3D.position.set(0, -0.015, 0.04);
   },
 
   onButtonEvent: function (id, evtName) {
-    var trackedControler = this.el.components["tracked-controls"];
-    if(trackedControler.controller){
-      console.log(trackedControler.controller.id, trackedControler.buttonStates);
-    }
     var buttonName = this.mapping['button' + id];
     this.el.emit(buttonName + evtName);
-    console.log("button event", buttonName, evtName);
+    console.log(evtName, buttonName);
   }
 });

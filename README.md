@@ -27,3 +27,6 @@ To use this component just add the touch-controls library to your page, and add 
   </body>
 </html>
 ```
+
+#Information
+I didn't get to find proper hands with all the animations possible with the Touch handling combination. So for now you just see your touch controlers and events are logged in the console.
